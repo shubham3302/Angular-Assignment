@@ -24,7 +24,8 @@
     <button (click)="pauseTimer()" class="m-3 btn btn-light">Pause</button>
     <button (click)="resetTimer()" class="m-3 btn btn-light">Reset</button>
   </div>
-  <div class="absolute timer col-md-6">
+  <div class="timer col-md-6">
+    <table>
     <thead>
       <tr>
         <th class="fs-3 fw-bold p-3 text-center">{{ startCounter }}</th>
@@ -37,6 +38,7 @@
         <th class="fs-3 fw-bold p-3">Paused</th>
       </tr>
     </tbody>
+  </table>
   </div>
 
   <div class="absolute col-md-6">

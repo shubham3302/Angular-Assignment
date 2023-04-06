@@ -1,14 +1,14 @@
 div.absolute {
 
     position: absolute;
-    top: 97%;
+    top: 67%;
     width: 50%;
 
 }
 
 div.timer {
-    position: absolute;
-    top: 97%;
-    width: 50%;
+     position: absolute;
+    top: 67%;
+    width: 30%; 
     left: 65%;
 }
