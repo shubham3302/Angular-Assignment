@@ -1,0 +1,33 @@
+
+
+  <div class="btn-group" id="radio-btn" role="group" aria-label="Basic radio toggle button group">
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked (click)="changeDisplay(1)">
+    <label class="btn btn-outline-primary" for="btnradio1">Grid View</label>
+  
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" (click)="changeDisplay(2)">
+    <label class="btn btn-outline-primary" for="btnradio2">List View</label>
+
+  </div>
+ 
+  <div class="row grid" *ngIf="display === 1">
+    <mat-grid-list cols="4"  [gutterSize]="'5%'">
+        <mat-grid-tile class="bg-light"*ngFor="let item of data">
+          <span class="p-3">Name: {{ item.name}} </span>
+          <span class="p-3">Price: {{ item.price}}</span></mat-grid-tile>
+      </mat-grid-list>
+
+  </div>
+
+  
+    <div class="container px-4" *ngIf="display === 2">
+      <div class="row gx-5" >
+        <div class="pb-4 col-md-6" *ngFor="let item of data">
+         <div class="p-3 border bg-light">
+          <span class="p-3">Name: {{ item.name}} </span>
+          <span class="p-3">Price: {{ item.price}}</span></div>
+        </div>
+      </div>
+    </div>
+
+
+ 

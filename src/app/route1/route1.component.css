@@ -1,0 +1,58 @@
+#rectangle{
+    
+    height:490px;
+    border: solid;
+    margin: 10px;
+}
+
+#mainDiv{
+    width: 800px; 
+    margin-left: 30%;
+}
+
+@keyframes r {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes r1 {
+    from {
+      transform: rotate(360deg);
+    }
+  
+    to {
+      transform: rotate(0deg);
+    }
+  }
+  
+  .rotate_me {
+    
+    transform: translateY(-50%);
+    transform: translateX(-50%);  
+    animation-name: r;
+    
+  }
+  
+  .rotate_me div {
+    position: absolute;
+    left: 60%;
+    top: 120%;
+    margin: 10%;
+    width: 300px;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    animation-name: r1;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  .rotate_me div span {
+    font-size: large;
+    font-weight: bold;
+  }
