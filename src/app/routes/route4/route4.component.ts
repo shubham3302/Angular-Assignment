@@ -1,25 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
-import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
+
+import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-route4',
   templateUrl: './route4.component.html',
   styleUrls: ['./route4.component.css']
 })
-export class Route4Component {
+export class Route4Component implements OnInit, OnDestroy {
 
   studentResult: any;
   headers: any;
   objectKeys: any;
-  constructor(private http: HttpClient) {
-    this.getStudentResult().subscribe(results => {
+  subscription: Subscription; 
+  constructor(private http: HttpClient) { 
+    console.log("constructor");
+   }
+  ngOnDestroy(): void {
+    console.log("ngOnDestroy");
+    this.subscription.unsubscribe();
+  }
+  ngOnInit(): void {
+    console.log("onInit");
+    this.subscription=this.getStudentResult().subscribe(results => {
       this.studentResult = results
-      console.log("result", this.studentResult);
       this.headers = Object.keys(this.studentResult[0]);
       this.objectKeys = Object.keys;
     });
-
   }
 
 
