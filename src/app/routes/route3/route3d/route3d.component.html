@@ -1,0 +1,9 @@
+<div class="absolute col-md-6">
+    <table>
+    <tr
+      class="fs-3 fw-bold p-3 text-center"
+      *ngFor="let recipient of map | keyvalue"
+      >{{ recipient.value }} {{ recipient.key |date:'medium' }}</tr>
+    
+  </table>
+  </div>

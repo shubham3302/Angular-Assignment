@@ -11,11 +11,11 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [ 
     Route1Component,
     Route2Component,
-    Route3Component,
     Route4Component
   ],
   imports: [

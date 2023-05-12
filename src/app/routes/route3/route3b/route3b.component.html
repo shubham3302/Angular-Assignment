@@ -1,0 +1,21 @@
+
+<div class="container border border-dark float-end p-5 col-md-4">
+    <form [formGroup]="timerForm" (ngSubmit)="startTimer()">
+      <div>
+        <label for="time" class="fw-bold fs-3"> Time </label>
+        <input
+          id="time"
+          class="form-control"
+          type="text"
+          formControlName="time"
+          class="m-3"
+        />
+      </div>
+
+      <button class="button" type="submit" class="m-3 btn btn-light">
+        Start Timer
+      </button>
+    </form>
+    <button (click)="pauseTimer()" class="m-3 btn btn-light">Pause</button>
+    <button (click)="resetTimer()" class="m-3 btn btn-light">Reset</button>
+  </div>

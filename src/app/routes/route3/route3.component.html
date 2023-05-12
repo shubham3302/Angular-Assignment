@@ -1,53 +1,6 @@
 <div class="p-5">
-  <div class="container border border-dark float-start p-5 col-md-4">
-    <p class="fs-3">Count Down Timer</p>
-    <p class="fs-1 fw-bold">{{ timeLeft }}</p>
-  </div>
-
-  <div class="container border border-dark float-end p-5 col-md-4">
-    <form [formGroup]="timerForm" (ngSubmit)="startTimer()">
-      <div>
-        <label for="time" class="fw-bold fs-3"> Time </label>
-        <input
-          id="time"
-          class="form-control"
-          type="text"
-          formControlName="time"
-          class="m-3"
-        />
-      </div>
-
-      <button class="button" type="submit" class="m-3 btn btn-light">
-        Start Timer
-      </button>
-    </form>
-    <button (click)="pauseTimer()" class="m-3 btn btn-light">Pause</button>
-    <button (click)="resetTimer()" class="m-3 btn btn-light">Reset</button>
-  </div>
-  <div class="timer col-md-6">
-    <table>
-    <thead>
-      <tr>
-        <th class="fs-3 fw-bold p-3 text-center">{{ startCounter }}</th>
-        <th class="fs-3 fw-bold p-3 text-center">{{ pauseCounter }}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th class="fs-3 fw-bold p-3">Started</th>
-        <th class="fs-3 fw-bold p-3">Paused</th>
-      </tr>
-    </tbody>
-  </table>
-  </div>
-
-  <div class="absolute col-md-6">
-    <table>
-    <tr
-      class="fs-3 fw-bold p-3 text-center"
-      *ngFor="let recipient of map | keyvalue"
-      >{{ recipient.value }} {{ recipient.key |date:'medium' }}</tr>
-    
-  </table>
-  </div>
+  <app-route3a></app-route3a>
+  <app-route3b></app-route3b>
+  <app-route3c></app-route3c>
+  <app-route3d></app-route3d>
 </div>
