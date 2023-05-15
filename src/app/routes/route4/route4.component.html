@@ -2,8 +2,9 @@
   <table class="table table-bordered">
     <thead>
       <tr>
-        <th *ngFor="let header of headers">
+        <th [appSort]="studentResult" data-order="asc"  *ngFor="let header of headers" [attr.id]="header">
           {{ header }}
+          <i class="bi bi-sort-up"></i>
         </th>
       </tr>
     </thead>

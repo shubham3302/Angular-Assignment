@@ -12,11 +12,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { SortDirective } from './route4/sort.directive';
 @NgModule({
   declarations: [ 
     Route1Component,
     Route2Component,
-    Route4Component
+    Route4Component,
+    SortDirective
   ],
   imports: [
     CommonModule,
