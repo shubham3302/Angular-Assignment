@@ -11,7 +11,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
-
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [ 
     Route1Component,
@@ -24,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatGridListModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbDropdownModule
 
   ]
 })

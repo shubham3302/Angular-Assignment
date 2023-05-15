@@ -1,10 +1,19 @@
 
 
   #radio-btn{
-    margin-left: 80%;
-    margin-bottom: 57px;
+   
+    margin: 2%
   }
   
   .grid {
     margin: 5%
+  }
+
+  #drop-down{
+    margin: 2%;
+    
+  }
+  .main-div {
+    margin-left: 80%; 
+    
   }
